@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Video Downloader</title>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  input[type="url"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #c82333;
+  }
+
+  p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2e7d32;
+  }
+</style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h2>YouTube Video Downloader</h2>
+      <form action="" method="POST">
+        <input
+          type="url"
+          name="link"
+          placeholder="Enter youtude video link"
+          required
+        />
+        <button type="submit" onclick="down()">Download</button>
+      </form>
+
+      {% if message %}
+        <p id="show"><strong>{{ message }}</strong></p>
+      {% endif %}
+    </div>
+
+    <script>
+        // function  dowm(){
+        //     setTimeout(() => {
+        //         const show = document.getElementById("show");
+        //         show.innerHTML = "downloding..."
+        //     }, 5000);
+        // }
+    </script>
+  </body>
+
+</html>
